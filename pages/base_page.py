@@ -1,7 +1,7 @@
 from selenium.common.exceptions import NoSuchElementException
 
 
-class BasePage(object):
+class BasePage:
     def __init__(self, browser, url, timeout=10):
         self.browser = browser
         self.url = url
