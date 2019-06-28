@@ -22,15 +22,14 @@ def browser(request):
             {'intl.accept_languages': user_language}
         )
         browser = webdriver.Chrome(options=options)
-        browser.implicitly_wait(8)
     elif browser_name == "firefox":
         print("\nstart firefox browser for test..")
         fp = webdriver.FirefoxProfile()
         fp.set_preference('intl.accept_languages', user_language)
         browser = webdriver.Firefox(firefox_profile=fp)
-        browser.implicitly_wait(8)
     else:
         print(f"Browser {browser_name} still is not implemented")
+    # browser.implicitly_wait(8)
     yield browser
     print("\nquit browser..")
     browser.quit()
