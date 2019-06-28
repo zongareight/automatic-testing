@@ -8,6 +8,10 @@ def test_guest_can_add_product_to_cart(browser):
     page.open()
     page.add_to_basket()
     page.solve_quiz_and_get_code()
-    cena = browser.find_element_by_css_selector('p.price_color').text
-    print(cena.split()[0])
-    time.sleep(20)
+    name = page.get_product_name()
+    price = page.get_product_price()
+    msg_name = page.get_product_name_from_message()
+    msg_price = page.get_product_price_from_message()
+    assert msg_name == name, ''
+    assert msg_price == price, ''
+    time.sleep(8)
