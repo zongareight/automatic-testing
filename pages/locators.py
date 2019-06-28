@@ -15,8 +15,8 @@ class ProductPageLocators:
     PRODUCT_PRICE = (By.CSS_SELECTOR, 'p.price_color')
     PRODUCT_NAME = (By.CSS_SELECTOR, 'h1')
     PRODUCT_NAME_IN_MESSAGE = (
-        By.CSS_SELECTOR, '#messages > .item:nth-child(1) strong'
+        By.CSS_SELECTOR, '#messages .alertinner  strong'
     )
     PRODUCT_PRICE_IN_MESSAGE = (
-        By.CSS_SELECTOR, '#messages > .item:nth-child(3) strong'
+        By.CSS_SELECTOR, '#messages .alert-info strong'
     )
