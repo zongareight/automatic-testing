@@ -9,3 +9,6 @@ class LoginPageLocators:
     LOGIN_FORM = (By.CSS_SELECTOR, '#login_form')
     REGISTER_FORM = (By.CSS_SELECTOR, '#register_form')
 
+
+class ProductPageLocators:
+    ADD_TO_BASKET = (By.CSS_SELECTOR, '.btn.btn-add-to-basket')
