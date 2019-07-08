@@ -6,6 +6,16 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET).click()
 
+    def added_product_name_is_correct(self):
+        name = self.get_product_name()
+        name_from_message = self.get_product_name_from_message()
+        assert name == name_from_message, 'Product name is wrong'
+
+    def added_product_price_is_correct(self):
+        price = self.get_product_price()
+        price_from_message = self.get_product_price_from_message()
+        assert price == price_from_message, 'Product price is wrong'
+
     def get_product_name(self):
         return self.browser.find_element(
             *ProductPageLocators.PRODUCT_NAME
